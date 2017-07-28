@@ -10,8 +10,9 @@ scope: text.html.markdown
 
 contexts:
   main:
-    - match: "" # Extend Markdown
-      push: "Packages/Markdown/Markdown.sublime-syntax"
+    - match: "" # Default: use and extend Markdown
+      push:
+        - include: scope:text.html.markdown
       with_prototype:
         - include: highlight # Put before liquid
         - include: liquid
