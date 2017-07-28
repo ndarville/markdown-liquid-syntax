@@ -1,0 +1,80 @@
+%YAML 1.2
+---
+name: Markdown Liquid
+file_extensions:
+  - markdown
+  - md
+  - mdown
+  - txt
+scope: text.html.markdown
+
+contexts:
+  main:
+    - match: "" # Extend Markdown
+      push: "Packages/Markdown/Markdown.sublime-syntax"
+      with_prototype:
+        - include: highlight # Put before liquid
+        - include: liquid
+
+  liquid:
+    - match: "{% comment %}"
+      scope: punctuation.definition.comment.begin.liquid
+      push:
+        - meta_scope: comment.block.liquid
+        - match: "{% endcomment %}"
+          scope: punctuation.definition.comment.end.liquid
+          pop: true
+    - match: "{%"
+      scope: punctuation.definition.tag.begin.liquid
+      push:
+      - match: "%}"
+        scope: punctuation.definition.tag.end.liquid
+        pop: true
+      - name: Keywords
+        match: \b(for|endfor|capture|endcapture|if|endif|unless|endunless|assign|highlight|endhighlight|include)\b
+        scope: keyword.control.liquid
+      - name: Arguments
+        match: "\""
+        push:
+          - meta_scope: string.quoted.double.liquid
+          - match: \\.
+            scope: constant.character.escape.liquid
+          - match: "\""
+            scope: punctuation.definition.tag.end.liquid
+            pop: true
+    - match: "{{"
+      scope: punctuation.definition.tag.begin.liquid
+      push:
+        - meta_content_scope: variable.liquid
+        - match: "}}"
+          scope: punctuation.definition.tag.end.liquid
+          pop: true
+
+  highlight:
+    # https://git.io/v7Z0k
+    - name: js
+      match: "{% (highlight) (js) %}"
+      captures:
+        1: keyword.control.liquid
+        2: variable.language.fenced.markdown
+      push:
+        - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
+        - meta_content_scope: source.js.embedded.markdown
+        - match: "{% (endhighlight) %}"
+          captures:
+            1: keyword.control.liquid
+          pop: true
+        - include: scope:source.js
+    - name: bash
+      match: "{% (highlight) (sh|bash|shell) %}"
+      captures:
+        1: keyword.control.liquid
+        2: variable.language.fenced.markdown
+      push:
+        - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
+        - meta_content_scope: source.sh.embedded.markdown
+        - match: "{% (endhighlight) %}"
+          captures:
+            1: keyword.control.liquid
+          pop: true
+        - include: scope:source.shell
