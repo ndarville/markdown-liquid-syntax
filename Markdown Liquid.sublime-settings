@@ -1,0 +1,9 @@
+{
+    "extensions": [
+        "markdown",
+        "mdown",
+        "md",
+        "txt"
+    ],
+    "wrap_width": 78
+}
