@@ -54,10 +54,11 @@ contexts:
   highlight:
     # https://git.io/v7Z0k
     - name: js
-      match: "{% (highlight) (js) %}"
+      match: "{% (highlight) (js) (lineos )?%}"
       captures:
         1: keyword.control.liquid
         2: variable.language.fenced.markdown
+        3: variable.parameter.fenced.markdown
       push:
         - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
         - meta_content_scope: source.js.embedded.markdown
@@ -67,10 +68,11 @@ contexts:
           pop: true
         - include: scope:source.js
     - name: bash
-      match: "{% (highlight) (sh|bash|shell) %}"
+      match: "{% (highlight) (sh|bash|shell) (lineos )?%}"
       captures:
         1: keyword.control.liquid
         2: variable.language.fenced.markdown
+        3: variable.parameter.fenced.markdown
       push:
         - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
         - meta_content_scope: source.sh.embedded.markdown
