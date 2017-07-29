@@ -2,6 +2,8 @@ Markdown Liquid syntax for Sublime Text 3
 =========================================
 I use always use [Jekyll][] which uses [Liquid][] for static sites and blogs.
 
+Jekyll uses the [Rouge][] highlighter by default. Not Pygments.
+
 With the additional features of Liquid, Markdown syntax highlighting alone just doesn’t cut it.
 
 Siteleaf have made an excellent [Liquid HTML syntax package][html], but any writing I do is Liquid Markdown.
@@ -53,5 +55,6 @@ For more on customizing Sublime Text 3 and your editor and programming experienc
 
 [jekyll]: https://jekyllrb.com
 [liquid]: https://shopify.github.io/liquid/
+[rouge]: http://rouge.jneen.net/
 [html]: https://github.com/siteleaf/liquid-syntax-mode
 [style repo]: https://github.com/ndarville/style
