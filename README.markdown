@@ -36,7 +36,7 @@ As of now, the default associations are:
 
 Currently, the default `<pre>` syntax is `{% highlight lang %}` and `{% endhighlight %}` from Liquid. I have only set up syntax highlighting inside to work with JavaScript, Shell, and YAML code. (Rouge’s `console` highlighter is pretty useless so I haven’t included it.) This is to avoid having a major list of supported programming or markup languages I won’t be using anyway.
 
-You can fork the project to edit the list and just add that repo instead of mine and use that. It’s way easier than demanding I change it in a pull request. The fairly short and simple source code should make it a lot easier for you than starting from scratch. I found the official documentation to be beyond awful; it doesn’t even have bloody pagination.
+You can fork the project to edit the list and just add that repo instead of mine and use that. It’s way easier than demanding I change it in a pull request. The fairly short and simple source code should make it a lot easier for you than starting from scratch; I haven’t bothered to use any complex regex either. I found the official documentation to be beyond awful; it doesn’t even have bloody pagination.
 
 After all, editors setups are very personal things; I just found the experience of making a ST3 syntax to be an absolute pain, so here’s a template you can use to add and edit to your own liking.
 
