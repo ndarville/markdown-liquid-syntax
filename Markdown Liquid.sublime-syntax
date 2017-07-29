@@ -37,7 +37,7 @@ contexts:
       - name: Arguments
         match: "\""
         push:
-          - meta_scope: string.quoted.double.liquid
+          - meta_scope: string.quoted.double.liquid variable.parameter.liquid
           - match: \\.
             scope: constant.character.escape.liquid
           - match: "\""
