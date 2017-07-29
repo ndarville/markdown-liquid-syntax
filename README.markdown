@@ -9,15 +9,15 @@ Siteleaf have made an excellent [Liquid HTML syntax package][html], but any writ
 Here is how you install my “package” via GitHub:
 
 1. Install [Package Control](https://packagecontrol.io/installation)
-2. (CTRL+Shift+P|CMD+Shift+P): Add Repository
+2. `CTRL+Shift+P`/`CMD+Shift+P`: Add Repository
 3. Enter `https://github.com/ndarville/markdown-liquid-syntax`
-4. (CTRL+Shift+P|CMD+Shift+P): Install Package
+4. `CTRL+Shift+P`/`CMD+Shift+P`: Install Package
 5. Select the package to install
 6. Select your new **Markdown Liquid** syntax
 
 Done.
 
-You may have to run Upgrade Package for this, but I honestly have no idea how it works.
+You may have to run **Upgrade Package** for this, but I honestly have no idea how it works.
 
 As of now, the default associations are:
 
@@ -54,4 +54,4 @@ For more on customizing Sublime Text 3 and your editor and programming experienc
 [jekyll]: https://jekyllrb.com
 [liquid]: https://shopify.github.io/liquid/
 [html]: https://github.com/siteleaf/liquid-syntax-mode
-[style]: https://github.com/ndarville/style
+[style repo]: https://github.com/ndarville/style
