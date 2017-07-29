@@ -21,6 +21,10 @@ Done.
 
 You may have to run **Upgrade Package** for this, but I honestly have no idea how it works.
 
+If you want to test your own syntax locally, I was able to test mine by saving my `.sublime-syntax` file to:
+
+    ~/Library/Application Support/Sublime Text 3/Packages/Liquid/
+
 As of now, the default associations are:
 
 ```yaml
