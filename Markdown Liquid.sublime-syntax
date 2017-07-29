@@ -14,6 +14,7 @@ contexts:
       push:
         - include: scope:text.html.markdown
       with_prototype:
+        - include: capture # Put before liquid
         - include: highlight # Put before liquid
         - include: liquid
 
@@ -32,7 +33,7 @@ contexts:
         scope: punctuation.definition.tag.end.liquid
         pop: true
       - name: Keywords
-        match: \b(for|endfor|capture|endcapture|if|endif|unless|endunless|assign|highlight|endhighlight|include)\b
+        match: \b(for|endfor|if|endif|unless|endunless|assign|include)\b
         scope: keyword.control.liquid
       - name: Arguments
         match: "\""
@@ -49,6 +50,19 @@ contexts:
         - meta_content_scope: variable.liquid
         - match: "}}"
           scope: punctuation.definition.tag.end.liquid
+          pop: true
+
+  capture:
+    - name: Capture
+      match: "{% (capture) ([A-Za-z0-9_]+) %}"
+      captures:
+        1: keyword.control.liquid
+        2: variable.markdown
+      push:
+        - meta_scope: markup.raw.block.liquid
+        - match: "{% (endcapture) %}"
+          captures:
+            1: keyword.control.liquid
           pop: true
 
   highlight:
