@@ -8,6 +8,21 @@ file_extensions:
   - txt
 scope: text.html.markdown
 
+# [A-Za-z0-9_]: Alphanumeric and underscore
+# \w: Alphanumeric with non-ASCII characters
+# \s: Whitespace
+# Word: \bfoo\b
+# Either: foo|bar
+# /s: Whitespace
+# ?: Zero or once
+# *: Zero or more
+# +: Once or more
+# .: Any character
+# (): Capture group
+# []: Character group
+# ^: Start of string
+# $: End of string
+
 contexts:
   main:
     - match: "" # Default: use and extend Markdown
