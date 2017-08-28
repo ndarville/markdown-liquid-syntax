@@ -25,6 +25,10 @@ If you want to test your own syntax locally, I was able to test mine by saving m
 
     ~/Library/Application Support/Sublime Text 3/Packages/Liquid/
 
+or
+
+    %APPDATA%\Sublime Text 3\Packages\Liquid\
+
 As of now, the default associations are:
 
 ```yaml
