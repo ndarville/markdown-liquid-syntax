@@ -83,7 +83,7 @@ contexts:
   highlight:
     # https://git.io/v7Z0k
     - name: js
-      match: "{% (highlight) (js) (lineos )?%}"
+      match: "{% (highlight) (js) (linenos )?%}"
       captures:
         1: keyword.control.liquid
         2: variable.language.fenced.markdown
@@ -97,7 +97,7 @@ contexts:
           pop: true
         - include: scope:source.js
     - name: r
-      match: "{% (highlight) (r) (lineos )?%}"
+      match: "{% (highlight) (r) (linenos )?%}"
       captures:
         1: keyword.control.liquid
         2: variable.language.fenced.markdown
@@ -111,7 +111,7 @@ contexts:
           pop: true
         - include: scope:source.r
     - name: bash
-      match: "{% (highlight) (sh|bash|shell) (lineos )?%}"
+      match: "{% (highlight) (sh|bash|shell) (linenos )?%}"
       captures:
         1: keyword.control.liquid
         2: variable.language.fenced.markdown
@@ -125,7 +125,7 @@ contexts:
           pop: true
         - include: scope:source.shell
     - name: yaml
-      match: "{% (highlight) (yaml|yml) (lineos )?%}"
+      match: "{% (highlight) (yaml|yml) (linenos )?%}"
       captures:
         1: keyword.control.liquid
         2: variable.language.fenced.markdown
