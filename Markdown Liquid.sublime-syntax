@@ -138,3 +138,31 @@ contexts:
             1: keyword.control.liquid
           pop: true
         - include: scope:source.yaml
+    - name: html
+      match: "{% (highlight) (html) (linenos )?%}"
+      captures:
+        1: keyword.control.liquid
+        2: variable.language.fenced.markdown
+        3: variable.parameter.fenced.markdown
+      push:
+        - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
+        - meta_content_scope: source.html.embedded.markdown
+        - match: "{% (endhighlight) %}"
+          captures:
+            1: keyword.control.liquid
+          pop: true
+        - include: scope:text.html
+    - name: css
+      match: "{% (highlight) (css) (linenos )?%}"
+      captures:
+        1: keyword.control.liquid
+        2: variable.language.fenced.markdown
+        3: variable.parameter.fenced.markdown
+      push:
+        - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
+        - meta_content_scope: source.css.embedded.markdown
+        - match: "{% (endhighlight) %}"
+          captures:
+            1: keyword.control.liquid
+          pop: true
+        - include: scope:text.css
