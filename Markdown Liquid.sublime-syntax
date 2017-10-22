@@ -151,7 +151,7 @@ contexts:
           captures:
             1: keyword.control.liquid
           pop: true
-        - include: scope:text.html
+        - include: scope:source.html
     - name: css
       match: "{% (highlight) (css) (linenos )?%}"
       captures:
@@ -165,4 +165,4 @@ contexts:
           captures:
             1: keyword.control.liquid
           pop: true
-        - include: scope:text.css
+        - include: scope:source.css
