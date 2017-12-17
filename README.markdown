@@ -29,6 +29,8 @@ or
 
     %APPDATA%\Sublime Text 3\Packages\Liquid\
 
+Remember quotes to `cd` on UNIX/macOS.
+
 As of now, the default associations are:
 
 ```yaml
