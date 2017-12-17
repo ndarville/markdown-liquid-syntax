@@ -62,9 +62,16 @@ I’ve also included a settings file because, for one, I hate not having line wr
 
 For more on customizing Sublime Text 3 and your editor and programming experience, check out my [style repo][] with my other configs.
 
+### A better Markdown lexer ###
+
+The default Markdown lexer in Sublime Text 3 has a few issues, especially abbreviation tags. You should download [MarkdownEditing][] through the package manager; it should automatically become your default Markdown lexer, but you may have to pick it as the syntax highlighter and go back to Markdown Liquid again right afterwards.
+
+Your syntax highlighting should look a lot better now.
+
 
 [jekyll]: https://jekyllrb.com
 [liquid]: https://shopify.github.io/liquid/
 [rouge]: http://rouge.jneen.net/
 [html]: https://github.com/siteleaf/liquid-syntax-mode
 [style repo]: https://github.com/ndarville/style
+[markdownediting]: https://github.com/SublimeText-Markdown/MarkdownEditing
