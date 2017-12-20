@@ -96,6 +96,20 @@ contexts:
             1: keyword.control.liquid
           pop: true
         - include: scope:source.js
+    - name: json
+      match: "{% (highlight) (json) (linenos )?%}"
+      captures:
+        1: keyword.control.liquid
+        2: variable.language.fenced.markdown
+        3: variable.parameter.fenced.markdown
+      push:
+        - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
+        - meta_content_scope: source.js.embedded.markdown
+        - match: "{% (endhighlight) %}"
+          captures:
+            1: keyword.control.liquid
+          pop: true
+        - include: scope:source.json
     - name: r
       match: "{% (highlight) (r) (linenos )?%}"
       captures:
