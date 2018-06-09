@@ -10,6 +10,7 @@ scope: text.html.markdown
 
 # [A-Za-z0-9_]: Alphanumeric and underscore
 # \w: Alphanumeric with non-ASCII characters
+# \h: Hex
 # \s: Whitespace
 # Word: \bfoo\b
 # Either: foo|bar
