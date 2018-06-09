@@ -161,12 +161,12 @@ contexts:
         3: variable.parameter.fenced.markdown
       push:
         - meta_scope: markup.raw.block.markdown markup.raw.block.fenced.markdown
-        - meta_content_scope: source.html.embedded.markdown
+        - meta_content_scope: text.html.embedded.markdown
         - match: "{% (endhighlight) %}"
           captures:
             1: keyword.control.liquid
           pop: true
-        - include: scope:source.html
+        - include: scope:text.html
     - name: css
       match: "{% (highlight) (css) (linenos )?%}"
       captures:
